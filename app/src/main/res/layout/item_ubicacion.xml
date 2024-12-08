@@ -1,0 +1,46 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location Name"
+            android:fontFamily="@font/equila"
+            android:textStyle="bold"
+            android:textColor="@color/principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textClimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Climate"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textTerrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terrain"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textSurfaceWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surface Water"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/nombrePersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personaje"
+            android:fontFamily="@font/equila"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/genderPersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/agePersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/eyeColorPersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eye color"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/hairColorPersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hair color"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_peliculas">
+
+    <fragment
+        android:id="@+id/nav_peliculas"
+        android:name="com.example.proyectoghibli.view.fragmentos.nav_peliculas"
+        android:label="Peliculas"
+        tools:layout="@layout/fragment_nav_peliculas" />
+    <fragment
+        android:id="@+id/nav_directores"
+        android:name="com.example.proyectoghibli.view.fragmentos.nav_directores"
+        android:label="Directores"
+        tools:layout="@layout/fragment_nav_directores" />
+    <fragment
+        android:id="@+id/nav_ubicaciones"
+        android:name="com.example.proyectoghibli.view.fragmentos.nav_ubicaciones"
+        android:label="Ubicaciones"
+        tools:layout="@layout/fragment_nav_ubicaciones" />
+    <fragment
+        android:id="@+id/nav_personajes"
+        android:name="com.example.proyectoghibli.view.fragmentos.nav_personaje"
+        android:label="Personajes"
+        tools:layout="@layout/fragment_nav_personajes" />
+</navigation>

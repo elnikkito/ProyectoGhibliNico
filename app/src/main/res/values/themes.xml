@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProyectoGhibli" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/secundario</item>
+        <item name="colorSecondary">@color/principal</item>
+    </style>
+
+    <style name="Theme.ProyectoGhibli" parent="Base.Theme.ProyectoGhibli" />
+</resources>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_peliculas"
+            android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="Peliculas" />
+        <item
+            android:id="@+id/nav_directores"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Directores" />
+        <item
+            android:id="@+id/nav_ubicaciones"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Ubicaciones" />
+        <item
+            android:id="@+id/nav_personajes"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Personajes" />
+    </group>
+</menu>
