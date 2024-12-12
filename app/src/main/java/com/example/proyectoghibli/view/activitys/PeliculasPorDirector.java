@@ -1,8 +1,6 @@
-package com.example.proyectoghibli.view;
+package com.example.proyectoghibli.view.activitys;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,25 +32,30 @@ public class PeliculasPorDirector extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peliculas_por_director);
 
+        //referencia al intent creado en AdaptadorDirector
         String nombreDirector = getIntent().getStringExtra("nombre_director");
 
         tituloDirector = findViewById(R.id.tituloDirector);
         recyclerPeliculas = findViewById(R.id.recyclerPeliculasPorDirector);
         recyclerPeliculas.setLayoutManager(new LinearLayoutManager(this));
 
-        tituloDirector.setText("Peliculas dirigidas por: " + nombreDirector);
+        //mostramos el nombre del director
+        tituloDirector.setText("Peliculas Dirigidas Por: \n \n" + nombreDirector);
 
         cargarPeliculasDelDirector(nombreDirector);
     }
 
+    //metodo para cargar las peliculas segun el director
     private void cargarPeliculasDelDirector(String nombreDirector) {
         ServicioApi apiService = ClienteApi.getClient().create(ServicioApi.class);
+        //metodo para obtener la lista de peliculas
         apiService.getPeliculas().enqueue(new Callback<List<Pelicula>>() {
             @Override
             public void onResponse(Call<List<Pelicula>> call, Response<List<Pelicula>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     peliculas = new ArrayList<>();
 
+                    //recorremos la lsita de peliculas para obtener las que esten relacionadas con ese director
                     for (Pelicula pelicula : response.body()) {
                         if (pelicula.getDirector().equalsIgnoreCase(nombreDirector)) {
                             peliculas.add(pelicula);
@@ -71,10 +74,6 @@ public class PeliculasPorDirector extends AppCompatActivity {
         });
     }
 
-    public void lanzarPrincipal(android.view.View view) {
-        Intent intent = new Intent(this, PeliculasPorDirector.class);
-        startActivity(intent);
-    }
 }
 
 

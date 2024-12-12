@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
-import com.example.proyectoghibli.view.InfoPeliculas;
+import com.example.proyectoghibli.view.activitys.InfoPeliculas;
 import com.example.proyectoghibli.model.Pelicula;
 import com.example.proyectoghibli.R;
 
@@ -26,6 +26,7 @@ public class AdaptadorPelicula extends RecyclerView.Adapter<AdaptadorPelicula.Pe
         this.context = context;
     }
 
+    //aqui controlamos la creacion de cada viewHolder para cada elemento del recyclerview
     @NonNull
     @Override
     public PeliculaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,6 +35,7 @@ public class AdaptadorPelicula extends RecyclerView.Adapter<AdaptadorPelicula.Pe
         return new PeliculaViewHolder(view);
     }
 
+    //datos representados en cada vista
     @Override
     public void onBindViewHolder(@NonNull PeliculaViewHolder holder, int position) {
         Pelicula pelicula = peliculas.get(position);
@@ -43,24 +45,28 @@ public class AdaptadorPelicula extends RecyclerView.Adapter<AdaptadorPelicula.Pe
                 .load(pelicula.getImage())
                 .into(holder.imagen);
 
+        //configuracmos un onClick para que cuando pulsemos a la imgaen nos mande,
+        //a la clase InfoPeliculas mostrando su contenido, con su respectivo xml.
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, InfoPeliculas.class);
-            intent.putExtra("TITULO", pelicula.getTitle());
-            intent.putExtra("DESCRIPCION", pelicula.getDescription());
-            intent.putExtra("DIRECTOR", pelicula.getDirector());
-            intent.putExtra("PRODUCTOR", pelicula.getProducer());
-            intent.putExtra("FECHA", pelicula.getRelease_date());
-            intent.putExtra("DURACION", pelicula.getRunning_time());
-            intent.putExtra("BANNER", pelicula.getMovie_banner());
+            intent.putExtra("titulo", pelicula.getTitle());
+            intent.putExtra("descripcion", pelicula.getDescription());
+            intent.putExtra("director", pelicula.getDirector());
+            intent.putExtra("productor", pelicula.getProducer());
+            intent.putExtra("fecha", pelicula.getRelease_date());
+            intent.putExtra("duracion", pelicula.getRunning_time());
+            intent.putExtra("banner", pelicula.getMovie_banner());
             context.startActivity(intent);
         });
     }
 
+    //contador de la cantidad de elementos que teiene la lista
     @Override
     public int getItemCount() {
         return peliculas.size();
     }
 
+    //asiganmos los datos del xml con los que queremos mostrar
     public static class PeliculaViewHolder extends RecyclerView.ViewHolder {
         TextView titulo;
         ImageView imagen;

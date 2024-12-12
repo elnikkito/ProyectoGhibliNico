@@ -3,10 +3,13 @@ package com.example.proyectoghibli.viewmodel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import com.example.proyectoghibli.api.ClienteApi;
 import com.example.proyectoghibli.api.ServicioApi;
 import com.example.proyectoghibli.model.Pelicula;
+
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -20,6 +23,7 @@ public class PeliculasViewModel extends ViewModel {
         servicioApi = ClienteApi.getClient().create(ServicioApi.class);
     }
 
+    //metodo para cargar las peliculas des de la api
     public void cargarPeliculas() {
         servicioApi.getPeliculas().enqueue(new Callback<List<Pelicula>>() {
             @Override
@@ -36,6 +40,7 @@ public class PeliculasViewModel extends ViewModel {
         });
     }
 
+    //metodo para obtener los datos a traves del live data
     public LiveData<List<Pelicula>> obtenerPeliculas() {
         return peliculasLiveData;
     }

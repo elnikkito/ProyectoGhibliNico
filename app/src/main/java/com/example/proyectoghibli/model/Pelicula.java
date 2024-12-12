@@ -10,10 +10,8 @@ public class Pelicula {
     private String running_time;
     private String movie_banner;
 
-    // Getters y setters para todos los campos
-    public String getTitle() {
-        return title;
-    }
+    // getters y setters
+    public String getTitle() {return title;}
 
     public String getMovie_banner() {
         return movie_banner;

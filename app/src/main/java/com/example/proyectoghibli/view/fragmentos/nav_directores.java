@@ -42,6 +42,7 @@ public class nav_directores extends Fragment {
         return view;
     }
 
+    //mertodo para cargar los directores desde la Api
     private void cargarDirectoresDesdeApi() {
         ServicioApi apiService = ClienteApi.getClient().create(ServicioApi.class);
         apiService.getPeliculas().enqueue(new Callback<List<Pelicula>>() {

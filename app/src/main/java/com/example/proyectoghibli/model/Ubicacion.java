@@ -6,7 +6,7 @@ public class Ubicacion {
     private String terrain;
     private String surface_water;
 
-    // Getters
+    // getters y setters
     public String getName() {
         return name;
     }

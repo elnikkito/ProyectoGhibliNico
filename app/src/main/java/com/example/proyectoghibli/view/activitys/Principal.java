@@ -1,4 +1,4 @@
-package com.example.proyectoghibli.view;
+package com.example.proyectoghibli.view.activitys;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,13 +24,18 @@ public class Principal extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //contenedor para el menu lateral
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+
+        //componente del menu lateral
         NavigationView navView = findViewById(R.id.nav_view);
 
+        //obtenemos el el fragmento de navegacion dentro del layout
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
         NavController navController = navHostFragment.getNavController();
 
+        //configuracion de la appbar
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_peliculas, R.id.nav_directores, R.id.nav_ubicaciones, R.id.nav_personajes)
                 .setDrawerLayout(drawerLayout)
@@ -41,6 +46,7 @@ public class Principal extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    //metodo para manejar la navegacion en el menu
     @Override
     public boolean onSupportNavigateUp() {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()

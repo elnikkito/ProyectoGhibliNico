@@ -12,8 +12,8 @@
         android:id="@+id/nombreDirector"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Director Name"
-        android:textSize="18sp"
+        android:text="Nombre del director"
+        android:textSize="18dp"
         android:padding="10dp" />
 
 </LinearLayout>

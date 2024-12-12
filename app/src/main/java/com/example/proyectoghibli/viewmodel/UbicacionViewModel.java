@@ -19,8 +19,10 @@ public class UbicacionViewModel extends ViewModel {
         return ubicaciones;
     }
 
+    //metodo para solicitar las ubicaciones a la api
     public void cargarUbicaciones() {
         ServicioApi apiService = ClienteApi.getClient().create(ServicioApi.class);
+
         apiService.getLocations().enqueue(new Callback<List<Ubicacion>>() {
             @Override
             public void onResponse(Call<List<Ubicacion>> call, Response<List<Ubicacion>> response) {

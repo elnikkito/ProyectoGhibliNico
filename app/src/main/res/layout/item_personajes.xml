@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -18,49 +19,53 @@
             android:text="Personaje"
             android:fontFamily="@font/equila"
             android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="#000000" />
+            android:textSize="16dp"
+            android:textColor="@color/principal" />
 
         <TextView
             android:id="@+id/genderPersonaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender"
             android:layout_marginTop="20dp"
             android:gravity="center"
+            android:text="Genero"
+            android:textColor="#333333"
+            android:textSize="14dp"
             android:textStyle="italic"
-            android:textSize="14sp"
-            android:textColor="#333333"/>
+            tools:ignore="TextSizeCheck" />
 
         <TextView
             android:id="@+id/agePersonaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Age"
             android:gravity="center"
+            android:text="Edad"
+            android:textColor="#333333"
+            android:textSize="14dp"
             android:textStyle="italic"
-            android:textSize="14sp"
-            android:textColor="#333333"/>
+            tools:ignore="TextSizeCheck" />
 
         <TextView
             android:id="@+id/eyeColorPersonaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Eye color"
             android:gravity="center"
+            android:text="Color de ojos"
+            android:textColor="#333333"
+            android:textSize="14dp"
             android:textStyle="italic"
-            android:textSize="14sp"
-            android:textColor="#333333"/>
+            tools:ignore="TextSizeCheck" />
 
         <TextView
             android:id="@+id/hairColorPersonaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hair color"
             android:gravity="center"
+            android:text="Color de pelo"
+            android:textColor="#333333"
+            android:textSize="14dp"
             android:textStyle="italic"
-            android:textSize="14sp"
-            android:textColor="#333333"/>
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

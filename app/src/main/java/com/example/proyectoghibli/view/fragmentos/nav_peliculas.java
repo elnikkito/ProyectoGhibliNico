@@ -1,17 +1,21 @@
 package com.example.proyectoghibli.view.fragmentos;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.proyectoghibli.adaptadores.AdaptadorPelicula;
 import com.example.proyectoghibli.R;
 import com.example.proyectoghibli.viewmodel.PeliculasViewModel;
+
 import org.jetbrains.annotations.Nullable;
 
 public class nav_peliculas extends Fragment {
@@ -26,9 +30,10 @@ public class nav_peliculas extends Fragment {
 
 
         recyclerView = view.findViewById(R.id.recyclerPeliculas);
+        //dividimos el recycler View en dos columnas
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
-
+        //observa el cambio que se produzca en la lista de peliculas y lo actualiza
         peliculasViewModel = new ViewModelProvider(this).get(PeliculasViewModel.class);
         peliculasViewModel.obtenerPeliculas().observe(getViewLifecycleOwner(), peliculas -> {
 
@@ -36,7 +41,7 @@ public class nav_peliculas extends Fragment {
             recyclerView.setAdapter(adaptador);
         });
 
-
+        //hacemos la llamada al metodo del ViewModel para cargar las peliculas a traves de la api
         peliculasViewModel.cargarPeliculas();
 
         return view;

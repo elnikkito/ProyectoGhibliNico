@@ -24,6 +24,7 @@ public class AdaptadorUbicaciones extends RecyclerView.Adapter<AdaptadorUbicacio
         this.context = context;
     }
 
+    //controla la  creacion de cada viewHolder
     @NonNull
     @Override
     public UbicacionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,6 +32,7 @@ public class AdaptadorUbicaciones extends RecyclerView.Adapter<AdaptadorUbicacio
         return new UbicacionViewHolder(view);
     }
 
+    //metodo que establewce como mostramos los datos
     @Override
     public void onBindViewHolder(@NonNull UbicacionViewHolder holder, int position) {
         Ubicacion location = ubicaciones.get(position);
@@ -40,11 +42,13 @@ public class AdaptadorUbicaciones extends RecyclerView.Adapter<AdaptadorUbicacio
         holder.surfaceWater.setText("Aguas superficiales: " + location.getSurface_water());
     }
 
+    //contador de cantidad de elementos de la lista
     @Override
     public int getItemCount() {
         return ubicaciones.size();
     }
 
+    //asigancion de los datos del xml
     public static class UbicacionViewHolder extends RecyclerView.ViewHolder {
         TextView name, climate, terrain, surfaceWater;
 

@@ -20,27 +20,27 @@
             android:fontFamily="@font/equila"
             android:textStyle="bold"
             android:textColor="@color/principal"
-            android:textSize="18sp" />
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/textClimate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Climate"
+            android:text="Clima"
             android:layout_marginTop="8dp" />
 
         <TextView
             android:id="@+id/textTerrain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terrain"
+            android:text="Terreno"
             android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/textSurfaceWater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Surface Water"
+            android:text="Agua Superficial"
             android:layout_marginTop="4dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

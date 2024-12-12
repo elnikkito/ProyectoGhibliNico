@@ -7,19 +7,15 @@ public class Personaje {
     private String eye_color;
     private String hair_color;
 
-    // Getters y Setters
+    // getters y setters
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getGender() {
-        return gender;
-    }
+    public String getGender() {return gender;}
 
     public void setGender(String gender) {
         this.gender = gender;
@@ -45,8 +41,6 @@ public class Personaje {
         return hair_color;
     }
 
-    public void setHair_color(String hair_color) {
-        this.hair_color = hair_color;
-    }
+    public void setHair_color(String hair_color) {this.hair_color = hair_color;}
 
 }

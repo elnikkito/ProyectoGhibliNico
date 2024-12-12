@@ -1,4 +1,4 @@
-package com.example.proyectoghibli.view;
+package com.example.proyectoghibli.view.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,13 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //metodo para lanzar la clase principal
     public void lanzarPrincipal(android.view.View view) {
         Intent intent = new Intent(MainActivity.this, Principal.class);
-        startActivity(intent);
-    }
-
-    public void lanzarInicio(android.view.View view) {
-        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
