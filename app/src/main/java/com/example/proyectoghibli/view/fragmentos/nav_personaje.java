@@ -20,6 +20,9 @@ import com.example.proyectoghibli.viewmodel.PersonajesViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Nav personaje.
+ */
 public class nav_personaje extends Fragment {
 
     private RecyclerView recyclerPersonajes;

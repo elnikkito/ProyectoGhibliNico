@@ -14,11 +14,19 @@ import com.example.proyectoghibli.model.Ubicacion;
 
 import java.util.List;
 
+/**
+ *  Adaptador ubicaciones.
+ */
 public class AdaptadorUbicaciones extends RecyclerView.Adapter<AdaptadorUbicaciones.UbicacionViewHolder> {
 
     private List<Ubicacion> ubicaciones;
     private Context context;
 
+    /**
+     *
+     * @param ubicaciones the ubicaciones
+     * @param context     the context
+     */
     public AdaptadorUbicaciones(List<Ubicacion> ubicaciones, Context context) {
         this.ubicaciones = ubicaciones;
         this.context = context;
@@ -48,10 +56,27 @@ public class AdaptadorUbicaciones extends RecyclerView.Adapter<AdaptadorUbicacio
         return ubicaciones.size();
     }
 
-    //asigancion de los datos del xml
-    public static class UbicacionViewHolder extends RecyclerView.ViewHolder {
-        TextView name, climate, terrain, surfaceWater;
 
+//asigancion de los datos del xml
+    public static class UbicacionViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * The Name.
+         */
+        TextView name, /**
+         * The Climate.
+         */
+        climate, /**
+         * The Terrain.
+         */
+        terrain, /**
+         * The Surface water.
+         */
+        surfaceWater;
+
+        /**
+         *
+         * @param itemView the item view
+         */
         public UbicacionViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.textName);

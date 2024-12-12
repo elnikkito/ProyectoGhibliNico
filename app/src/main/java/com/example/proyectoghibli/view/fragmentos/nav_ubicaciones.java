@@ -17,6 +17,9 @@ import com.example.proyectoghibli.adaptadores.AdaptadorUbicaciones;
 import com.example.proyectoghibli.viewmodel.UbicacionViewModel;
 
 
+/**
+ * Nav ubicaciones.
+ */
 public class nav_ubicaciones extends Fragment {
 
     private RecyclerView recyclerViewUbicaciones;

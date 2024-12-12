@@ -23,6 +23,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ *  Nav directores.
+ */
 public class nav_directores extends Fragment {
 
     private RecyclerView recyclerView;

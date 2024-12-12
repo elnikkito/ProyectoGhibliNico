@@ -12,6 +12,9 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.proyectoghibli.R;
 import com.google.android.material.navigation.NavigationView;
 
+/**
+ * Principal.
+ */
 public class Principal extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;

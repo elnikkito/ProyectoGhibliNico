@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyectoghibli.R;
 
+/**
+ *  Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    //metodo para lanzar la clase principal
+    /**
+     * Lanzar principal.
+     *
+     * @param view the view
+     */
+//metodo para lanzar la clase principal
     public void lanzarPrincipal(android.view.View view) {
         Intent intent = new Intent(MainActivity.this, Principal.class);
         startActivity(intent);

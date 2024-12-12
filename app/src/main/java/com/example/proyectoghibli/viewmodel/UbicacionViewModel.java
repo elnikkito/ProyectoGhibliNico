@@ -15,11 +15,19 @@ public class UbicacionViewModel extends ViewModel {
 
     private final MutableLiveData<List<Ubicacion>> ubicaciones = new MutableLiveData<>();
 
+    /**
+     * Gets ubicaciones.
+     *
+     * @return the ubicaciones
+     */
     public LiveData<List<Ubicacion>> getUbicaciones() {
         return ubicaciones;
     }
 
-    //metodo para solicitar las ubicaciones a la api
+    /**
+     * Cargar ubicaciones.
+     */
+//metodo para solicitar las ubicaciones a la api
     public void cargarUbicaciones() {
         ServicioApi apiService = ClienteApi.getClient().create(ServicioApi.class);
 

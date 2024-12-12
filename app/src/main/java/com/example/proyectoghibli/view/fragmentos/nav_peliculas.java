@@ -18,6 +18,9 @@ import com.example.proyectoghibli.viewmodel.PeliculasViewModel;
 
 import org.jetbrains.annotations.Nullable;
 
+/**
+ *  Nav peliculas.
+ */
 public class nav_peliculas extends Fragment {
     private PeliculasViewModel peliculasViewModel;
     private RecyclerView recyclerView;

@@ -18,12 +18,18 @@ public class PeliculasViewModel extends ViewModel {
     private MutableLiveData<List<Pelicula>> peliculasLiveData;
     private ServicioApi servicioApi;
 
+    /**
+     * Instantiates a new Peliculas view model.
+     */
     public PeliculasViewModel() {
         peliculasLiveData = new MutableLiveData<>();
         servicioApi = ClienteApi.getClient().create(ServicioApi.class);
     }
 
-    //metodo para cargar las peliculas des de la api
+    /**
+     * Cargar peliculas.
+     */
+//metodo para cargar las peliculas des de la api
     public void cargarPeliculas() {
         servicioApi.getPeliculas().enqueue(new Callback<List<Pelicula>>() {
             @Override
@@ -40,7 +46,12 @@ public class PeliculasViewModel extends ViewModel {
         });
     }
 
-    //metodo para obtener los datos a traves del live data
+    /**
+     * Obtener peliculas live data.
+     *
+     * @return the live data
+     */
+//metodo para obtener los datos a traves del live data
     public LiveData<List<Pelicula>> obtenerPeliculas() {
         return peliculasLiveData;
     }

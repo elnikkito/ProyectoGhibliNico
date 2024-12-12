@@ -21,7 +21,10 @@ public class PersonajesViewModel extends ViewModel {
         servicioApi = ClienteApi.getClient().create(ServicioApi.class);
     }
 
-    //metodo para cargar los personages des de la api
+    /**
+     * Cargar personajes.
+     */
+//metodo para cargar los personages des de la api
     public void cargarPersonajes() {
         servicioApi.getPersonajes().enqueue(new Callback<List<Personaje>>() {
             @Override
@@ -38,12 +41,24 @@ public class PersonajesViewModel extends ViewModel {
         });
     }
 
-    //metodo con el que se podran obtener los personajes a trabes del LiveData
+    /**
+     * Obtener personajes live data.
+     *
+     * @return the live data
+     */
+//metodo con el que se podran obtener los personajes a trabes del LiveData
     public LiveData<List<Personaje>> obtenerPersonajes() {
         return personajesLiveData;
     }
 
-    //metodo para filtrar personajes
+    /**
+     * Filtrar personajes list.
+     *
+     * @param personajes the personajes
+     * @param intro      the intro
+     * @return the list
+     */
+//metodo para filtrar personajes
     public List<Personaje> filtrarPersonajes(List<Personaje> personajes, String intro) {
         if (intro == null || intro.isEmpty()) {
             return personajes;

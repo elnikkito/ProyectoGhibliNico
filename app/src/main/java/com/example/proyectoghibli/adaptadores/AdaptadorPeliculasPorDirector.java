@@ -15,11 +15,19 @@ import com.example.proyectoghibli.model.Pelicula;
 import com.example.proyectoghibli.view.activitys.InfoPeliculas;
 import java.util.List;
 
+/**
+ * Adaptador peliculas por director.
+ */
 public class AdaptadorPeliculasPorDirector extends RecyclerView.Adapter<AdaptadorPeliculasPorDirector.PeliculaViewHolder> {
 
     private List<Pelicula> peliculas;
     private Context context;
 
+    /**
+     *
+     * @param peliculas the peliculas
+     * @param context   the context
+     */
     public AdaptadorPeliculasPorDirector(List<Pelicula> peliculas, Context context) {
         this.peliculas = peliculas;
         this.context = context;
@@ -66,9 +74,19 @@ public class AdaptadorPeliculasPorDirector extends RecyclerView.Adapter<Adaptado
 
     //asiganmos los datos del xml con los que queremos mostrar
     public static class PeliculaViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * The Titulo.
+         */
         TextView titulo;
+        /**
+         * The Imagen.
+         */
         ImageView imagen;
 
+        /**
+         *
+         * @param itemView the item view
+         */
         public PeliculaViewHolder(@NonNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.textTitulo);

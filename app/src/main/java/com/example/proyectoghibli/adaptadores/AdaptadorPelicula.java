@@ -16,11 +16,19 @@ import com.example.proyectoghibli.R;
 
 import java.util.List;
 
+/**
+ * Adaptador pelicula.
+ */
 public class AdaptadorPelicula extends RecyclerView.Adapter<AdaptadorPelicula.PeliculaViewHolder> {
 
     private List<Pelicula> peliculas;
     private Context context;
 
+    /**
+     *
+     * @param peliculas the peliculas
+     * @param context   the context
+     */
     public AdaptadorPelicula(List<Pelicula> peliculas, Context context) {
         this.peliculas = peliculas;
         this.context = context;
@@ -66,11 +74,21 @@ public class AdaptadorPelicula extends RecyclerView.Adapter<AdaptadorPelicula.Pe
         return peliculas.size();
     }
 
-    //asiganmos los datos del xml con los que queremos mostrar
+//asiganmos los datos del xml con los que queremos mostrar
     public static class PeliculaViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * The Titulo.
+         */
         TextView titulo;
+        /**
+         * The Imagen.
+         */
         ImageView imagen;
 
+        /**
+         *
+         * @param itemView the item view
+         */
         public PeliculaViewHolder(@NonNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.textTitulo);

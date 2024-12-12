@@ -13,11 +13,19 @@ import com.example.proyectoghibli.view.activitys.PeliculasPorDirector;
 
 import java.util.List;
 
+/**
+ *  Adaptador director.
+ */
 public class AdaptadorDirector extends RecyclerView.Adapter<AdaptadorDirector.DirectorViewHolder> {
 
     private List<String> directores;
     private Context context;
 
+    /**
+     *
+     * @param directores the directores
+     * @param context    the context
+     */
     public AdaptadorDirector(List<String> directores, Context context) {
         this.directores = directores;
         this.context = context;
@@ -52,10 +60,20 @@ public class AdaptadorDirector extends RecyclerView.Adapter<AdaptadorDirector.Di
         return directores.size();
     }
 
+    /**
+     *  Director view holder.
+     */
     //asiganmos los valores del xml con los que queremos mostrar
     public static class DirectorViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * The Nombre director.
+         */
         TextView nombreDirector;
 
+        /**
+         *
+         * @param itemView the item view
+         */
         public DirectorViewHolder(@NonNull View itemView) {
             super(itemView);
             nombreDirector = itemView.findViewById(R.id.nombreDirector);

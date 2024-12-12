@@ -12,11 +12,19 @@ import com.example.proyectoghibli.R;
 import com.example.proyectoghibli.model.Personaje;
 import java.util.List;
 
+/**
+ *Adaptador personaje.
+ */
 public class AdaptadorPersonaje extends RecyclerView.Adapter<AdaptadorPersonaje.PersonajeViewHolder> {
 
     private Context context;
     private List<Personaje> personajes;
 
+    /**
+     *
+     * @param context    the context
+     * @param personajes the personajes
+     */
     public AdaptadorPersonaje(Context context, List<Personaje> personajes) {
         this.context = context;
         this.personajes = personajes;
@@ -48,17 +56,42 @@ public class AdaptadorPersonaje extends RecyclerView.Adapter<AdaptadorPersonaje.
         return personajes.size();
     }
 
-    //metodo para actualizar la lista de personajes
+    /**
+     * Actualizar lista.
+     *
+     * @param nuevosPersonajes the nuevos personajes
+     */
+//metodo para actualizar la lista de personajes
     //sirve para el searchView
     public void actualizarLista(List<Personaje> nuevosPersonajes) {
         this.personajes = nuevosPersonajes;
         notifyDataSetChanged();
     }
 
-    //asiganmos los datos del xml con los que queremos mostrar
-    public class PersonajeViewHolder extends RecyclerView.ViewHolder {
-        TextView namePersonaje, genderPersonaje, agePersonaje, eyeColorPersonaje, hairColorPersonaje;
 
+//asiganmos los datos del xml con los que queremos mostrar
+    public class PersonajeViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * The Name personaje.
+         */
+        TextView namePersonaje, /**
+         * The Gender personaje.
+         */
+        genderPersonaje, /**
+         * The Age personaje.
+         */
+        agePersonaje, /**
+         * The Eye color personaje.
+         */
+        eyeColorPersonaje, /**
+         * The Hair color personaje.
+         */
+        hairColorPersonaje;
+
+        /**
+         *
+         * @param itemView the item view
+         */
         public PersonajeViewHolder(View itemView) {
             super(itemView);
             namePersonaje = itemView.findViewById(R.id.nombrePersonaje);

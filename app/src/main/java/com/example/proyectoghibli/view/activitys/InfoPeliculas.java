@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.proyectoghibli.R;
 
+/**
+ * Info peliculas.
+ */
 public class InfoPeliculas extends AppCompatActivity {
 
     private TextView titulo, descripcion, director, productor, fecha, duracion;
